@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="月度总结, HUZJ&#39;S BLOG">
-    <meta name="description" content="启明星月度总结在启明星的这一个月，过的很充实。每个星期都会有不同的任务，每次任务又会对一类知识点进行扩充。而且在启明星能看到比自己更努力的人，就可以不停的督促自己去学习，使自己不掉队。而且进了启明星，不仅仅是找到一个学习的位置，还是加入了一">
+    <meta name="keywords" content="服务器操作指令, HUZJ&#39;S BLOG">
+    <meta name="description" content="服务器操作指令常用系统命令 (命令基本为英文缩写)系统命令一般为 命令 参数 操作项服务命令一般为 service 服务名 重启/启动/停止 非root用户需要加sudo提升权限
+普通的Linux指令ls 即list,列出所有内容 加参数 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>月度总结 | HUZJ&#39;S BLOG</title>
+    <title>服务器操作指令 | HUZJ&#39;S BLOG</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,13 +305,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        月度总结
+                        服务器操作指令
                     </div>
                 </div>
             </div>
@@ -433,7 +434,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-10-19
+                    2019-10-23
                 </div>
 
                 
@@ -449,12 +450,96 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="启明星月度总结"><a href="#启明星月度总结" class="headerlink" title="启明星月度总结"></a>启明星月度总结</h1><p>在启明星的这一个月，过的很充实。每个星期都会有不同的任务，每次任务又会对一类知识点进行扩充。而且在启明星能看到比自己更努力的人，就可以不停的督促自己去学习，使自己不掉队。而且进了启明星，不仅仅是找到一个学习的位置，还是加入了一个团队。  </p>
-<p>这里的学习氛围是真的好，每个人来了以后就会有想做到事，而且每周的周任务就像是一个明确的方向，让你学习这一类的内容。而且不仅学习了C语言的内容，也学习了很重要并且很实用的技能（比如写这个博客）。这是我一个人在图书馆不可能完成的。</p>
-<p>每周的例会也很有用，能够及时的发现自己的状态好不好，并对现状进行改变，而且能看到其他人的进度从而适当加快自己的速度保持不掉队。而且还有每周一讲和最后讲知识点。这些都是对自己知识库的补充。</p>
-<p>当然，前辈们也很照顾我们这些新生，问题发给学长，学姐，都很快的给了答复，而且我师傅对我是真的好，有时候问他问题不仅把原理讲出来，还画图画出来。而且还推荐了许多书给我看，使我在想学新东西的时候有了很多资料参考。</p>
-<p>最后这个月确实学到了许多，从一个scanf的不怎么会用的菜鸟，训练成了一个掌握了一些基础知识的人。很充实。</p>
+                <h1 id="服务器操作指令"><a href="#服务器操作指令" class="headerlink" title="服务器操作指令"></a>服务器操作指令</h1><p>常用系统命令 (命令基本为英文缩写)<br>系统命令一般为 命令 参数 操作项<br>服务命令一般为 service 服务名 重启/启动/停止 非root用户需要加sudo提升权限</p>
+<h2 id="普通的Linux指令"><a href="#普通的Linux指令" class="headerlink" title="普通的Linux指令"></a>普通的Linux指令</h2><pre><code>ls 即list,列出所有内容 加参数 -a all,列出所有 -l long,列出文件的详细信息
 
+mkdir 即 make directory 创建目录 -p参数 递归创建 即不存在父级目录则自动创建
+
+cd 即 change directory 进入目录
+
+touch 创建文件
+
+cat 查看文件
+
+mv move 重命名
+
+rm 即 remove 删除 一般使用时常加上 -rf参数 强制递归删除
+
+cp 即 copy 拷贝/复制
+
+pwd 即 print working directory 打印当前目录
+
+ln 创建连接 一般加-s创建软连接 软连接即快捷方式 
+
+   比如 ln -s ccop-api-1.2.jar ccop-api.jar 
+   创建快捷方式ccop-api.jar指向ccop-api-1.2.jar
+
+more 查看文件 如果文件过大不适合用vi打开查看
+
+tail 查看文件尾部 一般加上-f循环读取 (即一直读取文件末尾内容) -n10 读取末尾10行
+
+   示例 : tail -f log.txt
+
+压缩命令 
+  tar -zcvf filename.tar.gz dirname 压缩
+  tar -zxvf filename.tar.gz 解压缩</code></pre><h2 id="系统管理命令"><a href="#系统管理命令" class="headerlink" title="系统管理命令"></a>系统管理命令</h2><pre><code>top 动态显示当前耗费资源最多进程信息
+
+可以指定参数更改刷新频率 详细扩展http://blog.csdn.net/sanshiqiduer/article/details/1933625
+
+ps -aux 显示当前运行的进程 一般配置管道符使用 管道符合为| 即往后传递执行
+ps -aux 和 ps -ef 为两种显示方式 http://www.linuxidc.com/Linux/2016-07/133515.htm
+
+grep 过滤命令
+
+ 配合上例 :
+
+  ps -ef | grep java 查看所有的进程 过滤包含java关键字的进程
+
+
+df -h 查看磁盘状态 一般可用于查看是否挂载了网络硬盘 或者磁盘是否满 . 如果挂载了网络硬盘会看到结果里包含IP地址的挂载项
+
+ifconfig 查看网络 新版系统一般用ip a查看 查看IP地址mac地址等信息
+
+netstat 查看网络状态 一般加参数 -lnpt (当前监听的端口) 或者 -anpt (当前已经建立的链接)
+
+kill 杀掉进程 数据库类尽量不要这样操作,以免发送灾难后果.
+
+kill 一般是杀掉进程号 配合ps查询到的进程ID
+
+kill 发送给用户的信号为终止信号15 部分程序无效 可以加-9强制执行
+
+pkill 此命令不使用pid进程杀死,可以直接加程序名杀死. 存在误杀可能性.
+
+重启 shutdown -r now 或reboot 一般非root用户没有权限操作 dev用户需要加sudo执行 sudo用于提升权限</code></pre><h2 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h2><pre><code>如果用不惯vi 可以使用nano编辑文件, vim是vi的升级版 . 使用vi操作文件相比较nano入门较难,熟练后操作效率很高
+
+vim 三种模式 命令模式,插入模式,编辑模式
+
+命令模式按 esc然后输入冒号:或者/进入命令模式 执行命令.保存:w 退出:q 设置行号:set nu 查找/word等操作性的东西
+
+一般模式:进行一些查看操作等,都是快捷键操作gg行首 G文档末尾 也可以进行快捷的复制粘贴yy p 删除一个单词 dw
+
+编辑模式 按i进入, 可以对文本进行编辑操作. i 或者a都可以 光标后和光标前
+
+不同的教程对vi的三种操作模式叫法不一样, 但是大部分都是分为三种模式进行讲解:
+
+以下为一个Ubuntu下的讲解示例:https://segmentfault.com/a/1190000002447171</code></pre><h2 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h2><pre><code>用户 一般最高权限为root root几乎可以执行任何内容
+咱们默认的使用的dev用户 部分系统命令不支持dev执行 需要加sudo 提升权限执行 如supervisor
+
+文件权限分为读写执行三种
+
+r读 数值表示为4
+w写 数值表示为2
+x执行 数值表示为1
+
+示例:
+ll 查询此jar包文件
+-rw-r--r-- 1 dev dev 97M Sep 12 18:53 ccop-pdk-service-1.0-SNAPSHOT.jar
+第一位为文件类型 d为目录 l为链接 -为普通文件等等
+后面三个位置分别为 文件所有者权限 文件所属组权限 其他用户权限
+
+常用操作 sudo chown dev:dev ccop-api.jar (某些文件归root所有,导致dev没有权限读取,更改为dev读取)
+sudo chmod u+x ccopmanager.sh 给用户加执行权限
+sudo chmod 644 更改为所有者为读写权限 其余为只读权限 </code></pre>
             </div>
             <hr/>
 
@@ -479,7 +564,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/10/19/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/">http://yoursite.com/2019/10/19/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://yoursite.com/2019/10/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/">http://yoursite.com/2019/10/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -681,9 +766,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/10/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/">
                     <div class="card-image">
@@ -702,9 +788,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -713,6 +799,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -723,27 +810,19 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/19/%E5%AF%92%E5%81%87%E7%AD%94%E8%BE%A9/">
+                <a href="/2019/10/19/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="寒假答辩">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="月度总结">
                         
-                        <span class="card-title">寒假答辩</span>
+                        <span class="card-title">月度总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            英语测试网站1.涉及知识
-C#网页开发
-数据库创建
-前端与后台的连接
-
-2.主要功能
-可以登陆与注册，而且注册时可以判断用户名，手机号， 邮箱是否已经被注册，并将注册好的账号传到数据库
-
-可以查询自己的个人资料，并且可以在进行验证后进行密码
+                            启明星月度总结在启明星的这一个月，过的很充实。每个星期都会有不同的任务，每次任务又会对一类知识点进行扩充。而且在启明星能看到比自己更努力的人，就可以不停的督促自己去学习，使自己不掉队。而且进了启明星，不仅仅是找到一个学习的位置，还是加入了一
                         
                     </div>
                     <div class="publish-info">
