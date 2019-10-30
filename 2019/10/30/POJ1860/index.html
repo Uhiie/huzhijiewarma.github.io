@@ -489,19 +489,13 @@ void warshall_floyd()
 </ul>
 <h2 id="本题代码"><a href="#本题代码" class="headerlink" title="本题代码"></a>本题代码</h2><pre><code>#include &lt;iostream&gt;
 #include &lt;string.h&gt;
-#include &lt;cmath&gt;
-#include &lt;iomanip&gt;
-#include &lt;unordered_map&gt;
-#include &lt;vector&gt;
-#include &lt;priority_queue&gt; 
-#include &lt;sstream&gt;
 #include &lt;algorithm&gt;
 using namespace std;
 
 typedef long long ll;
 
 int n, m, s;
-double map[105], g1[105][105], g2[105];
+double map[105], g1[105][105], g2[105][105], v;
 
 
 
@@ -513,7 +507,7 @@ int floyd()
     for(k=1;k&lt;=n;k++)
        for(i=1;i&lt;=n;i++)
           for(j=1;j&lt;=n;j++)
-              if((map[i]-g2[i][j])*g1[i][j]&gt;map[j])map[j]=(map[i]-g2[i][j])*g1[i][j];
+            if((map[i]-g2[i][j])*g1[i][j]&gt;map[j])map[j]=(map[i]-g2[i][j])*g1[i][j];
     for(i=1;i&lt;=n;i++)
         if(d[i]&lt;map[i])return 1;
     return 0;
@@ -528,12 +522,13 @@ int main()
          double c, d, e, f;
          cin &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d &gt;&gt; e &gt;&gt; f;
          g1[a][b] = c; g2[a][b] = d;
-         g1[b][a] = e; g2[a][b] = f;
+         g1[b][a] = e; g2[b][a] = f;
 
-    }    
+    }   
     map[s] = v;
-    if(floyd()) cout &lt;&lt; &quot;yos&quot; &lt;&lt; endl;
-    else cout &lt;&lt; &quot;no&quot; &lt;&lt; endl;
+    floyd();
+    if(floyd()) cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;
+    else cout &lt;&lt; &quot;NO&quot; &lt;&lt; endl;
     return 0;
 }</code></pre>
             </div>
