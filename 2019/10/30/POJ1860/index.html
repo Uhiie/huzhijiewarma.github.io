@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="服务器操作指令, HUZJ&#39;S BLOG">
-    <meta name="description" content="服务器操作指令常用系统命令 (命令基本为英文缩写)系统命令一般为 命令 参数 操作项服务命令一般为 service 服务名 重启/启动/停止 非root用户需要加sudo提升权限
-普通的Linux指令ls 即list,列出所有内容 加参数 ">
+    <meta name="keywords" content="POJ1860, HUZJ&#39;S BLOG">
+    <meta name="description" content="POJ 1860题目翻译过来是这样的：
+我们的城市有几个货币兑换点。让我们假设每一个点都只能兑换专门的两种货币。可以有几个点，专门从事相同货币兑换。每个点都有自己的汇率，外汇汇率的A到B是B的数量你1A。同时各交换点有一些佣金，你要为你的交">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>服务器操作指令 | HUZJ&#39;S BLOG</title>
+    <title>POJ1860 | HUZJ&#39;S BLOG</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,13 +305,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        服务器操作指令
+                        POJ1860
                     </div>
                 </div>
             </div>
@@ -434,7 +434,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-10-23
+                    2019-10-30
                 </div>
 
                 
@@ -450,96 +450,92 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="服务器操作指令"><a href="#服务器操作指令" class="headerlink" title="服务器操作指令"></a>服务器操作指令</h1><p>常用系统命令 (命令基本为英文缩写)<br>系统命令一般为 命令 参数 操作项<br>服务命令一般为 service 服务名 重启/启动/停止 非root用户需要加sudo提升权限</p>
-<h2 id="普通的Linux指令"><a href="#普通的Linux指令" class="headerlink" title="普通的Linux指令"></a>普通的Linux指令</h2><pre><code>ls 即list,列出所有内容 加参数 -a all,列出所有 -l long,列出文件的详细信息
+                <h1 id="POJ-1860"><a href="#POJ-1860" class="headerlink" title="POJ 1860"></a>POJ 1860</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>翻译过来是这样的：</p>
+<p>我们的城市有几个货币兑换点。让我们假设每一个点都只能兑换专门的两种货币。可以有几个点，专门从事相同货币兑换。每个点都有自己的汇率，外汇汇率的A到B是B的数量你1A。同时各交换点有一些佣金，你要为你的交换操作的总和。在来源货币中总是收取佣金。</p>
+<p>例如，如果你想换100美元到俄罗斯卢布兑换点，那里的汇率是29.75，而佣金是0.39，你会得到（100 - 0.39）×29.75＝2963.3975卢布。</p>
+<p>你肯定知道在我们的城市里你可以处理不同的货币。让每一种货币都用唯一的一个小于N的整数表示。然后每个交换点，可以用6个整数表描述：整数a和b表示两种货币，a到b的汇率，a到b的佣金，b到a的汇率，b到a的佣金。</p>
+<p>nick有一些钱在货币S，他希望能通过一些操作（在不同的兑换点兑换），增加他的资本。当然，他想在最后手中的钱仍然是S。帮他解答这个难题，看他能不能完成这个愿望。</p>
+<p>输入数据：</p>
+<p>第一行四个数，N，表示货币的总数；M，兑换点的数目；S，nick手上的钱的类型；V，nick手上的钱的数目；1&lt;=S&lt;=N&lt;=100, 1&lt;=M&lt;=100, V 是一个实数 0&lt;=V&lt;=103. </p>
+<p>接下来M行，每行六个数，整数a和b表示两种货币，a到b的汇率，a到b的佣金，b到a的汇率，b到a的佣金（0&lt;=佣金&lt;=102，10-2&lt;=汇率&lt;=102）</p>
+<p>输出数据：</p>
+<p>如果nick能够实现他的愿望，则输出YES，否则输出NO。</p>
+<p>样例输入：</p>
+<p>3 2 1 20.0</p>
+<p>1 2 1.00 1.00 1.00 1.00</p>
+<p>2 3 1.10 1.00 1.10 1.00</p>
+<p>样例输出</p>
+<p>YES</p>
+<p>##题解</p>
+<p>一开始我以为是迪杰斯特拉，准备用优先队列写，但是发现情况过于多且复杂，于是感觉无从下手，但是发现如果出现了正环，那么可以无限循环必然会产生多的财富，于是就用 <strong>floyd</strong> 来判断正环。但是Floyd这个算法我已经很久没用了，所以已经忘得差不多了，所以就再次复习（划掉）一下Floyd。</p>
+<h2 id="Floyd"><a href="#Floyd" class="headerlink" title="Floyd"></a>Floyd</h2><ul>
+<li><p>Floyd算法是解决任意两点间的最短路径问题，其思想其实是动态规划，使用状态转移方程来完成的。</p>
+</li>
+<li><p>一般用于点比较少的题目，因为Floyd算法需要三重循环，这个时间复杂度是很可怕的，所以基本上点都不会超过100，1000就差不多没了。</p>
+</li>
+<li><p>那么Floyd算法就是来引入第三点，而这第三点是n个点，设第三点是i， 任意两点的距离的最短距离就是min（map【a】【b】， map【a】【i】 + map【i】【b】），这就是这个算法的核心，那么三重循环的代码就是这样的。</p>
+<p> ###代码</p>
+<pre><code>#include&lt;iostream&gt;
+int d[MAX_V][MAX_V];   
+int    V;
+void warshall_floyd()
+{
+    for(int k = 0;k &lt; V;k++)
+        for(int i = 0;i &lt; V;i++)
+            for(int j = 0;j &lt; V;j++)
+                d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
+}
+是不是看起来很简单！！</code></pre></li>
+</ul>
+<h2 id="本题代码"><a href="#本题代码" class="headerlink" title="本题代码"></a>本题代码</h2><pre><code>#include &lt;iostream&gt;
+#include &lt;string.h&gt;
+#include &lt;cmath&gt;
+#include &lt;iomanip&gt;
+#include &lt;unordered_map&gt;
+#include &lt;vector&gt;
+#include &lt;priority_queue&gt; 
+#include &lt;sstream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
 
-mkdir 即 make directory 创建目录 -p参数 递归创建 即不存在父级目录则自动创建
+typedef long long ll;
 
-cd 即 change directory 进入目录
-
-touch 创建文件
-
-cat 查看文件
-
-mv move 重命名
-
-rm 即 remove 删除 一般使用时常加上 -rf参数 强制递归删除
-
-cp 即 copy 拷贝/复制
-
-pwd 即 print working directory 打印当前目录
-
-ln 创建连接 一般加-s创建软连接 软连接即快捷方式 
-
-   比如 ln -s ccop-api-1.2.jar ccop-api.jar 
-   创建快捷方式ccop-api.jar指向ccop-api-1.2.jar
-
-more 查看文件 如果文件过大不适合用vi打开查看
-
-tail 查看文件尾部 一般加上-f循环读取 (即一直读取文件末尾内容) -n10 读取末尾10行
-
-   示例 : tail -f log.txt
-
-压缩命令 
-  tar -zcvf filename.tar.gz dirname 压缩
-  tar -zxvf filename.tar.gz 解压缩</code></pre><h2 id="系统管理命令"><a href="#系统管理命令" class="headerlink" title="系统管理命令"></a>系统管理命令</h2><pre><code>top 动态显示当前耗费资源最多进程信息
-
-可以指定参数更改刷新频率 详细扩展http://blog.csdn.net/sanshiqiduer/article/details/1933625
-
-ps -aux 显示当前运行的进程 一般配置管道符使用 管道符合为| 即往后传递执行
-ps -aux 和 ps -ef 为两种显示方式 http://www.linuxidc.com/Linux/2016-07/133515.htm
-
-grep 过滤命令
-
- 配合上例 :
-
-  ps -ef | grep java 查看所有的进程 过滤包含java关键字的进程
+int n, m, s;
+double map[105], g1[105][105], g2[105];
 
 
-df -h 查看磁盘状态 一般可用于查看是否挂载了网络硬盘 或者磁盘是否满 . 如果挂载了网络硬盘会看到结果里包含IP地址的挂载项
 
-ifconfig 查看网络 新版系统一般用ip a查看 查看IP地址mac地址等信息
+int floyd()
+{
+    int i,j,k;
+    double d[105];
+    for(i=1;i&lt;=n;i++)d[i]=map[i];
+    for(k=1;k&lt;=n;k++)
+       for(i=1;i&lt;=n;i++)
+          for(j=1;j&lt;=n;j++)
+              if((map[i]-g2[i][j])*g1[i][j]&gt;map[j])map[j]=(map[i]-g2[i][j])*g1[i][j];
+    for(i=1;i&lt;=n;i++)
+        if(d[i]&lt;map[i])return 1;
+    return 0;
+}
 
-netstat 查看网络状态 一般加参数 -lnpt (当前监听的端口) 或者 -anpt (当前已经建立的链接)
+int main()
+{
+    cin &gt;&gt; n &gt;&gt; m &gt;&gt; s &gt;&gt; v;
+    for(int i = 0;i &lt; m;i++)
+    {
+         int a, b;
+         double c, d, e, f;
+         cin &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d &gt;&gt; e &gt;&gt; f;
+         g1[a][b] = c; g2[a][b] = d;
+         g1[b][a] = e; g2[a][b] = f;
 
-kill 杀掉进程 数据库类尽量不要这样操作,以免发送灾难后果.
-
-kill 一般是杀掉进程号 配合ps查询到的进程ID
-
-kill 发送给用户的信号为终止信号15 部分程序无效 可以加-9强制执行
-
-pkill 此命令不使用pid进程杀死,可以直接加程序名杀死. 存在误杀可能性.
-
-重启 shutdown -r now 或reboot 一般非root用户没有权限操作 dev用户需要加sudo执行 sudo用于提升权限</code></pre><h2 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h2><pre><code>如果用不惯vi 可以使用nano编辑文件, vim是vi的升级版 . 使用vi操作文件相比较nano入门较难,熟练后操作效率很高
-
-vim 三种模式 命令模式,插入模式,编辑模式
-
-命令模式按 esc然后输入冒号:或者/进入命令模式 执行命令.保存:w 退出:q 设置行号:set nu 查找/word等操作性的东西
-
-一般模式:进行一些查看操作等,都是快捷键操作gg行首 G文档末尾 也可以进行快捷的复制粘贴yy p 删除一个单词 dw
-
-编辑模式 按i进入, 可以对文本进行编辑操作. i 或者a都可以 光标后和光标前
-
-不同的教程对vi的三种操作模式叫法不一样, 但是大部分都是分为三种模式进行讲解:
-
-以下为一个Ubuntu下的讲解示例:https://segmentfault.com/a/1190000002447171</code></pre><h2 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h2><pre><code>用户 一般最高权限为root root几乎可以执行任何内容
-咱们默认的使用的dev用户 部分系统命令不支持dev执行 需要加sudo 提升权限执行 如supervisor
-
-文件权限分为读写执行三种
-
-r读 数值表示为4
-w写 数值表示为2
-x执行 数值表示为1
-
-示例:
-ll 查询此jar包文件
--rw-r--r-- 1 dev dev 97M Sep 12 18:53 ccop-pdk-service-1.0-SNAPSHOT.jar
-第一位为文件类型 d为目录 l为链接 -为普通文件等等
-后面三个位置分别为 文件所有者权限 文件所属组权限 其他用户权限
-
-常用操作 sudo chown dev:dev ccop-api.jar (某些文件归root所有,导致dev没有权限读取,更改为dev读取)
-sudo chmod u+x ccopmanager.sh 给用户加执行权限
-sudo chmod 644 更改为所有者为读写权限 其余为只读权限 </code></pre>
+    }    
+    map[s] = v;
+    if(floyd()) cout &lt;&lt; &quot;yos&quot; &lt;&lt; endl;
+    else cout &lt;&lt; &quot;no&quot; &lt;&lt; endl;
+    return 0;
+}</code></pre>
             </div>
             <hr/>
 
@@ -564,7 +560,7 @@ sudo chmod 644 更改为所有者为读写权限 其余为只读权限 </code></
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/10/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/">http://yoursite.com/2019/10/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/</a>
+                    <a href="http://yoursite.com/2019/10/30/POJ1860/">http://yoursite.com/2019/10/30/POJ1860/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -766,9 +762,10 @@ sudo chmod 644 更改为所有者为读写权限 其余为只读权限 </code></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/10/30/POJ1860/">
                     <div class="card-image">
@@ -787,9 +784,9 @@ sudo chmod 644 更改为所有者为读写权限 其余为只读权限 </code></
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -798,6 +795,7 @@ sudo chmod 644 更改为所有者为读写权限 其余为只读权限 </code></
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -808,24 +806,25 @@ sudo chmod 644 更改为所有者为读写权限 其余为只读权限 </code></
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/19/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/">
+                <a href="/2019/10/23/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="月度总结">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="服务器操作指令">
                         
-                        <span class="card-title">月度总结</span>
+                        <span class="card-title">服务器操作指令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            启明星月度总结在启明星的这一个月，过的很充实。每个星期都会有不同的任务，每次任务又会对一类知识点进行扩充。而且在启明星能看到比自己更努力的人，就可以不停的督促自己去学习，使自己不掉队。而且进了启明星，不仅仅是找到一个学习的位置，还是加入了一
+                            服务器操作指令常用系统命令 (命令基本为英文缩写)系统命令一般为 命令 参数 操作项服务命令一般为 service 服务名 重启/启动/停止 非root用户需要加sudo提升权限
+普通的Linux指令ls 即list,列出所有内容 加参数 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-23
                             </span>
                         <span class="publish-author">
                             
